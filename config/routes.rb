@@ -1,33 +1,24 @@
 Rails.application.routes.draw do
 
-    #API routes
-  get 'api/ratings/new_rating' => 'api/ratings#create'
-  get 'api/ratings/map_ratings' => 'api/ratings#map_ratings'
-
   namespace :api do
-    resources :ratings, except: [:new, :edit, :show]
+    resources :todos, except: [:new, :edit]
   end
 
-    #Application Routes
   root 'welcome#index'
-  get '/users/log_in' => 'users#log_in', as: :log_in
-  get '/users/log_out' => 'users#log_out', as: :get_log_out
 
-  resources :users, except: [:show]
+  get '/users/log_in' => 'users#log_in'
   get '/users/profile' => 'users#profile', as: :user_profile
-  get '/users/map_view' => 'users#map_view', as: :map_view
-  get '/users/edit' => 'users#edit', as: :edit
-  get '/users/vibe' => 'users#new_rating', as: :new_rating
+  resources :users, only: [:new, :create]
 
-
-    #Session Routes
   post '/sessions' => 'sessions#create'
   delete '/sessions' => 'sessions#destroy', as: :log_out
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

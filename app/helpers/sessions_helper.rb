@@ -1,17 +1,13 @@
-# determines current user and authenticates that user
-
 module SessionsHelper
-  def current_user
-  if session[:user_id]
-    @current_user = User.find(session[:user_id])
-  end
-end
 
-def authenticate!
-  unless current_user
-    redirect_to root_path
-    return false
+  def current_user
+    if session[:user_id]
+      @current_user = User.find(session[:user_id])
+    end
   end
-  return true
-end
+
+  def authenticate!
+    redirect root_path unless current_user
+  end
+
 end

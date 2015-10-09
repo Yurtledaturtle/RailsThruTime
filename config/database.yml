@@ -23,13 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: group_project_3_development
+  database: ToDo_ly2_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: group_project_3
+  #username: ToDo_ly2
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: group_project_3_test
+  database: ToDo_ly2_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: group_project_3_production
-  username: group_project_3
-  password: <%= ENV['GROUP_PROJECT_3_DATABASE_PASSWORD'] %>
+  database: ToDo_ly2_production
+  username: ToDo_ly2
+  password: <%= ENV['TODO_LY2_DATABASE_PASSWORD'] %>
