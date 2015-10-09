@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require jqueryui
+//= require jquery.serializejson
+//= require underscore
+//= require backbone
+
 console.log('application manifest');

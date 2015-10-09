@@ -1,14 +1,105 @@
+<!-- Vibe Application layout, contains underscore template bootstrap styling, mobile viewport and hamburger menu -->
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ToDoLy2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <title>Vibe</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script type="text/template" id='map-rating-template'>
+      <td><%%= mood %></td>
+      <td><%%= comment %></td>
+      <td><%%= latitude %></td>
+      <td><%%= longitude %></td>
+  </script>
+
+  <script type="text/template" id='profile-rating-template'>
+      <td><%%= mood %></td>
+      <td><%%= comment %></td>
+      <td>
+        <button type="button" class='remove'>
+          Remove
+        </button>
+      </td>
+  </script>
+
 </head>
-<body class="container">
-<div class="row">
-<%= yield %>
-</div>
+<body>
+
+
+
+  <div class="<%= @changeClass || 'container' %>">
+
+
+
+
+    <header>
+      <% if session[:user_id] %>
+      <a href="/users/map_view"><div class='mainLogo'>Vibe</div></a>
+      <% else %>
+      <a href="/"><div class='mainLogo'>Vibe</div></a>
+      <% end %>
+
+      <button class="hamburger">&#9776;</button>
+      <button class="cross">&#735;</button>
+
+    </header>
+
+    <div class="menu">
+      <ul>
+        <% if session[:user_id] %>
+        <a href="/users/profile"><li>Profile</li></a>
+        <a href="/users/map_view"><li>Map View</li></a>
+        <a href="/users/vibe"><li>Vibe</li></a>
+        <a href="/users/log_out"><li>Log Out</li></a>
+        <% else %>
+        <a href="/users/new"><li>Sign Up</li></a>
+        <a href="/users/log_in"><li>Log In</li></a>
+        <% end %>
+      </ul>
+    </div>
+      <%= yield %>
+    <footer>
+      Created by the Wandering Silence Team: Eduard Erlikh, Sam Shull, Matt Koski
+    </footer>
+
+    <script type="text/javascript">
+
+    $( ".cross" ).hide();
+    $( ".menu" ).hide();
+    $( ".hamburger" ).click(function() {
+      $( ".menu" ).slideToggle( "slow", function() {
+        $( ".hamburger" ).hide();
+        $( ".cross" ).show();
+      });
+    });
+
+    $( ".cross" ).click(function() {
+      $( ".menu" ).slideToggle( "slow", function() {
+        $( ".cross" ).hide();
+        $( ".hamburger" ).show();
+      });
+    });
+
+    </script>
+
+  </div>
 </body>
 </html>
