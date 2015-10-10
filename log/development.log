@@ -5996,3 +5996,260 @@ Processing by Api::DecadesController#destroy as JSON
   [1m[35mSQL (0.3ms)[0m  DELETE FROM "decades" WHERE "decades"."id" = $1  [["id", 12]]
   [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
 Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2015-10-10 16:08:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 477ms (Views: 463.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-10 16:08:34 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-10 16:08:34 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-10 16:08:34 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-10 16:08:34 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-10 16:08:34 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-10 16:08:34 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-10 16:08:34 -0400
+
+
+Started GET "/assets/app.self-10aac8eefc2cce9b1bff01366a458f731bf81ea9078aa2af1d3d6b03a2cea494.js?body=1" for ::1 at 2015-10-10 16:08:34 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-10 16:08:34 -0400
+
+
+Started GET "/assets/application.self-471fd924e2c455e6a95178d1fc23db20fc5a02f997ed7eac00a6b9b5cbb94961.js?body=1" for ::1 at 2015-10-10 16:08:34 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-10 16:08:34 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-10 16:08:34 -0400
+
+
+Started GET "/users/log_in" for ::1 at 2015-10-10 16:08:36 -0400
+Processing by UsersController#log_in as HTML
+  Rendered users/log_in.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 104ms (Views: 102.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-10 16:08:39 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KkdjG2x9+3xE5up9vRx6pdzaNlxD3iCmS+rPxibct+msjIDTN0Ot+nxR+z9vzYgckqevu5+y7S73UYeHJFSIyg==", "username"=>"m", "password"=>"[FILTERED]", "commit"=>"Log-In"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "m"]]
+Redirected to http://localhost:3000/users/profile
+Completed 302 Found in 145ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-10 16:08:39 -0400
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (1.1ms)
+Completed 200 OK in 73ms (Views: 69.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/decades" for ::1 at 2015-10-10 16:08:39 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1[0m  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[35mDecade Load (0.6ms)[0m  SELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 70ms (Views: 14.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2015-10-10 16:09:36 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 88ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/log_in" for ::1 at 2015-10-10 16:09:37 -0400
+Processing by UsersController#log_in as HTML
+  Rendered users/log_in.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 70ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-10 16:09:39 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cFqoioz1pO9OwFpv12jbdBj816pS3QsrjcVdPu3xUfL2kUtC18vyaXZ3Sy0FuSnNVoFOTY6xxqMxfhV/73lu0Q==", "username"=>"m", "password"=>"[FILTERED]", "commit"=>"Log-In"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "m"]]
+Redirected to http://localhost:3000/users/profile
+Completed 302 Found in 93ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-10 16:09:40 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (0.6ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/decades" for ::1 at 2015-10-10 16:09:40 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[36mDecade Load (0.6ms)[0m  [1mSELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-10 16:11:48 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 169ms (Views: 162.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/log_in" for ::1 at 2015-10-10 16:11:50 -0400
+Processing by UsersController#log_in as HTML
+  Rendered users/log_in.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 155ms (Views: 153.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-10 16:11:52 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ul1Vee+G6EbGuLv4ZTs6Kd2Ox2BoTDDmTCi6ET/d/988lraxtLi+wP4Pqrq36siQk/Neh7Qg/W7wk/JQPVXA/A==", "username"=>"m", "password"=>"[FILTERED]", "commit"=>"Log-In"}
+  [1m[35mUser Load (2.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "m"]]
+Redirected to http://localhost:3000/users/profile
+Completed 302 Found in 83ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-10 16:11:53 -0400
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (2.0ms)
+Completed 200 OK in 58ms (Views: 56.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/decades" for ::1 at 2015-10-10 16:11:53 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1[0m  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[35mDecade Load (0.4ms)[0m  SELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-10 16:12:10 -0400
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (1.0ms)
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-10 16:12:10 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-10 16:12:10 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-10 16:12:10 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-10 16:12:10 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-10 16:12:10 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-10 16:12:10 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-10 16:12:10 -0400
+
+
+Started GET "/assets/app.self-10aac8eefc2cce9b1bff01366a458f731bf81ea9078aa2af1d3d6b03a2cea494.js?body=1" for ::1 at 2015-10-10 16:12:10 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-10 16:12:10 -0400
+
+
+Started GET "/assets/application.self-471fd924e2c455e6a95178d1fc23db20fc5a02f997ed7eac00a6b9b5cbb94961.js?body=1" for ::1 at 2015-10-10 16:12:10 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-10 16:12:10 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-10 16:12:11 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-10 16:12:11 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1[0m  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[35mDecade Load (0.3ms)[0m  SELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-10 16:12:21 -0400
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (1.2ms)
+Completed 200 OK in 52ms (Views: 50.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-10 16:12:21 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-10 16:12:21 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-10 16:12:21 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-10 16:12:21 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-10 16:12:21 -0400
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-10 16:12:21 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-10 16:12:21 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-10 16:12:21 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-10 16:12:21 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-10 16:12:21 -0400
+
+
+Started GET "/assets/application.self-471fd924e2c455e6a95178d1fc23db20fc5a02f997ed7eac00a6b9b5cbb94961.js?body=1" for ::1 at 2015-10-10 16:12:21 -0400
+
+
+Started GET "/assets/app.self-10aac8eefc2cce9b1bff01366a458f731bf81ea9078aa2af1d3d6b03a2cea494.js?body=1" for ::1 at 2015-10-10 16:12:21 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-10 16:12:21 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1[0m  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[35mDecade Load (0.3ms)[0m  SELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/sessions" for ::1 at 2015-10-10 16:12:43 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sL1C7iE11VGg5h36ucPczglXB+U5R3qt1xJj0h7gwfc2dqEmeguD15hRDLhrEi53RyqeAuUrtyVrqSuTHGj+1A=="}
+Redirected to http://localhost:3000/users/log_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/log_in" for ::1 at 2015-10-10 16:12:43 -0400
+Processing by UsersController#log_in as HTML
+  Rendered users/log_in.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 55ms (Views: 54.7ms | ActiveRecord: 0.0ms)
