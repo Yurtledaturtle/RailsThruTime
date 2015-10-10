@@ -3,25 +3,24 @@ console.log('scripts loaded');
 var token = $('#api-token').val();
 $.ajaxSetup({
   headers:{
-    "accept": "applications/json",
+    "accept": "application/json",
     "token": token
   }
 });
 
 // Model
-var Todo = Backbone.Model.extend({});
+var Decade = Backbone.Model.extend({});
 
 // Collection
-var TodoCollection = Backbone.Collection.extend({
-  model: Todo,
-  url: '/api/todos'
+var DecadeCollection = Backbone.Collection.extend({
+  model: Decade,
+  url: '/api/decades'
 });
 
 // Views
-var TodoView = Backbone.View.extend({
+var DecadeView = Backbone.View.extend({
   tagName: 'div',
-  className: 'todo',
-  template: _.template( $('#todo-template').html() ),
+  template: _.template( $('#decade-template').html() ),
   render: function(){
     this.$el.empty();
     var html = this.template( this.model.toJSON() );
@@ -29,25 +28,25 @@ var TodoView = Backbone.View.extend({
     this.$el.append( $html );
   },
   events:{
-    'click button.remove': 'removeTodo'
+    'click button.remove': 'removeDecade'
   },
-  removeTodo: function(){
+  removeDecade: function(){
     this.model.destroy();
     this.$el.remove();
   }
 
 });
 
-var TodoListView = Backbone.View.extend({
+var DecadeListView = Backbone.View.extend({
   initialize: function(){
     this.listenTo(this.collection, 'add', this.render);
   },
   render: function(){
     this.$el.empty();
-    var todos = this.collection.models;
+    var decades = this.collection.models;
     var view;
-    for (var i = 0; i < todos.length; i++) {
-      view = new TodoView({model: todos[i]});
+    for (var i = 0; i < decades.length; i++) {
+      view = new DecadeView({ model: decades[i] });
       view.render();
       this.$el.append( view.$el );
     }
@@ -57,22 +56,22 @@ var TodoListView = Backbone.View.extend({
 
 
 
-var todos = new TodoCollection();
-var todoPainter = new TodoListView({
-  collection: todos,
-  el: $('#todos-list')
+var decades = new DecadeCollection();
+var decadePainter = new DecadeListView({
+  collection: decades,
+  el: $('#decades-list')
 });
-todos.fetch();
+decades.fetch();
 
+//
+// $('form.create-decade').on('submit', function(e) {
+//       e.preventDefault();
+//       var data = $(this).serializeJSON();
+//       decades.create(data.decade);
+//     });
 
-$('form.create-todo').on('submit', function(e) {
-      e.preventDefault();
-      var data = $(this).serializeJSON();
-      todos.create(data.todo);
-    });
-
-// $('form.create-todo').on('submit', function(e){
-//   e.preventDefault();
-//   var newMessage = $(this).find("#me-message").val();
-//   chirps.create({message: newMessage});
-// });
+$('form.create-decade').on('submit', function(e){
+  e.preventDefault();
+  var newComment = $(this).find("#decade-comment").val();
+  decades.create({comment: newComment});
+});

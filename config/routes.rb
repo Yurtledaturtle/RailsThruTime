@@ -1,19 +1,23 @@
 Rails.application.routes.draw do
 
+  # get 'api/decades/new_year' => 'api/decades#create'
+  # get 'api/decades/music_years' => 'api/decades#music_years'
+
   namespace :api do
-    resources :todos, except: [:new, :edit]
+    resources :decades, except: [:new, :edit]
   end
 
-  root 'welcome#index'
+  get '/users/log_in' => 'users#log_in', as: :log_in
 
-  get '/users/log_in' => 'users#log_in'
-  get '/users/profile' => 'users#profile', as: :user_profile
+
+  get '/users/profile' => 'users#profile', as: :profile
+  # get '/users/music' => 'users#music', as: :music
   resources :users, only: [:new, :create]
 
   post '/sessions' => 'sessions#create'
   delete '/sessions' => 'sessions#destroy', as: :log_out
 
-
+  root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -6,17 +6,23 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create(user_params)
-    redirect_to '/'
+    User.create(user_params)
+    redirect_to log_in_path
   end
 
   def log_in
   end
 
+  def music
+  return nil unless authenticate!
+  @user = current_user
+  @decades = Decades.all
+end
+
   def profile
     authenticate!
     @user = current_user
-    # render layout: "profile_layout"
+    render layout: "profile_layout"
   end
 
   private

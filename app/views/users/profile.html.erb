@@ -1,14 +1,16 @@
 <input type="hidden" id='api-token' value="<%= @user.token %>">
 
 
+
+
 <h3>Welcome Back <%= @user.username %></h3>
 
 <%= button_to 'Log-Out', log_out_path, method: :delete %>
 
-<form class="create-todo" action="/api/todos" method="post">
-  <input type="text" name="todo[task]">
-  <input type="submit" value="Todo">
+<form class="create-decade" action="/api/decades" method="post">
+  <input type="text" id="decade-comment" name="decades[comment]">
+  <input type="submit" value="Go!">
 </form>
 
-<section id="todos-list">
+<section id="decades-list">
 </section>
