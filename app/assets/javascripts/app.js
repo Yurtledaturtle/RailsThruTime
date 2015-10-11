@@ -76,6 +76,21 @@ $('form.create-decade').on('submit', function(e){
   decades.create({comment: newComment});
 });
 
+function slider(){
+  $( "#timeline" ).slider({
+      orientation: "horizontal",
+      range: "min",
+      min: 1900,
+      max: 2010,
+      step: 10,
+      value: 2010,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( ui.value );
+      }
+    });
+    $( "#amount" ).val( $( "#timeline" ).slider( "value" ) );
+  }
+
 function show2010(){
   $("#2010").click(function(){
       $("#1900player").hide();
@@ -144,6 +159,7 @@ $(document).ready(function(){
   // show1960();
   // show1970();
   // show1980();
+  slider();
   show1990();
   show2000();
   show2010();

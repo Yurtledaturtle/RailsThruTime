@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require jquery-ui
  *= require_self
  */
 
@@ -30,7 +31,12 @@ body{
   margin-left: 50%;
   margin-right: 50%;
 }
+.timeline-div{
+  background: white;
+}
 #user-content{
+  border-radius: 12px;
+  padding: 7px;
   width: 20%;
   text-align: center;
   margin-left: 50%;

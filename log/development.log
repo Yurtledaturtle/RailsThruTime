@@ -11470,3 +11470,1993 @@ Processing by Api::DecadesController#index as JSON
   [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1[0m  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
   [1m[35mDecade Load (0.3ms)[0m  SELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1  [["user_id", 1]]
 Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-10-11 14:51:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (5.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 655ms (Views: 638.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 14:51:28 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-11 14:51:28 -0400
+
+
+Started GET "/assets/application.self-7c5fcdae93f70341f62e5d693bd3983ab9133d025ddd6b714e213c55705c546a.css?body=1" for ::1 at 2015-10-11 14:51:28 -0400
+
+
+Started GET "/assets/app.self-1e2ec6d341e3a33814c58930101a606bc896d243cfe40aaee046610577e44540.js?body=1" for ::1 at 2015-10-11 14:51:28 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-11 14:51:28 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 14:51:28 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-11 14:51:28 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-11 14:51:28 -0400
+
+
+Started GET "/assets/application.self-471fd924e2c455e6a95178d1fc23db20fc5a02f997ed7eac00a6b9b5cbb94961.js?body=1" for ::1 at 2015-10-11 14:51:28 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-11 14:51:28 -0400
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-11 14:51:28 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 14:51:28 -0400
+
+
+Started GET "/users/log_in" for ::1 at 2015-10-11 14:51:34 -0400
+Processing by UsersController#log_in as HTML
+  Rendered users/log_in.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 98ms (Views: 97.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-11 14:51:37 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zpaX8PMvr9IMSUfjpyi5LLDUJUw4vAwKimG2sZpCUqu7P+wsXMqB8CaAsRVM+3LvXU+uysKcS0J0rWVdIYPYZA==", "username"=>"m", "password"=>"[FILTERED]", "commit"=>"Log-In"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "m"]]
+Redirected to http://localhost:3000/users/profile
+Completed 302 Found in 140ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 14:51:37 -0400
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (0.9ms)
+Completed 200 OK in 70ms (Views: 66.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 14:51:38 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1[0m  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[35mDecade Load (0.5ms)[0m  SELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 59ms (Views: 2.0ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/api/decades" for ::1 at 2015-10-11 14:51:52 -0400
+Processing by Api::DecadesController#create as JSON
+  Parameters: {"comment"=>"stuff", "decade"=>{"comment"=>"stuff"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1[0m  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "decades" ("comment", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["comment", "stuff"], ["user_id", 1], ["created_at", "2015-10-11 18:51:52.878980"], ["updated_at", "2015-10-11 18:51:52.878980"]]
+  [1m[35m (2.9ms)[0m  COMMIT
+Completed 200 OK in 36ms (Views: 0.6ms | ActiveRecord: 5.2ms)
+
+
+Started DELETE "/api/decades/70" for ::1 at 2015-10-11 14:51:54 -0400
+Processing by Api::DecadesController#destroy as JSON
+  Parameters: {"id"=>"70"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1[0m  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[35mDecade Load (0.5ms)[0m  SELECT  "decades".* FROM "decades" WHERE "decades"."user_id" = $1 AND "decades"."id" = $2 LIMIT 1  [["user_id", 1], ["id", 70]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "decades" WHERE "decades"."id" = $1  [["id", 70]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:04:33 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (3.4ms)
+Completed 200 OK in 143ms (Views: 128.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:04:33 -0400
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-11 15:04:33 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 15:04:33 -0400
+
+
+Started GET "/assets/application.self-2cc1a640e7aba6b7fba609ad638020d243e760cebd303f49ad5d9799bb691756.css?body=1" for ::1 at 2015-10-11 15:04:33 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-11 15:04:33 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-11 15:04:33 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 15:04:33 -0400
+
+
+Started GET "/assets/app.self-1e2ec6d341e3a33814c58930101a606bc896d243cfe40aaee046610577e44540.js?body=1" for ::1 at 2015-10-11 15:04:33 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-11 15:04:33 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-11 15:04:33 -0400
+
+
+Started GET "/assets/application.self-471fd924e2c455e6a95178d1fc23db20fc5a02f997ed7eac00a6b9b5cbb94961.js?body=1" for ::1 at 2015-10-11 15:04:33 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-11 15:04:33 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:04:33 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[36mDecade Load (0.5ms)[0m  [1mSELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:18:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (3.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (5.5ms)
+Completed 200 OK in 731ms (Views: 664.3ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-11 15:18:29 -0400
+
+
+Started GET "/assets/application.self-2cc1a640e7aba6b7fba609ad638020d243e760cebd303f49ad5d9799bb691756.css?body=1" for ::1 at 2015-10-11 15:18:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 15:18:29 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:18:29 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-11 15:18:29 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 15:18:29 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-11 15:18:29 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-11 15:18:29 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-11 15:18:29 -0400
+
+
+Started GET "/assets/app.self-43e3778717a5815bbae9e654eb511558c2ac884642b21dccc3dc0497cfe40a40.js?body=1" for ::1 at 2015-10-11 15:18:29 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-11 15:18:29 -0400
+
+
+Started GET "/assets/application.self-471fd924e2c455e6a95178d1fc23db20fc5a02f997ed7eac00a6b9b5cbb94961.js?body=1" for ::1 at 2015-10-11 15:18:30 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:18:30 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[36mDecade Load (1.0ms)[0m  [1mSELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 66ms (Views: 3.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:19:31 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (1.5ms)
+Completed 200 OK in 424ms (Views: 418.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:19:32 -0400
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-11 15:19:32 -0400
+
+
+Started GET "/assets/application.self-2cc1a640e7aba6b7fba609ad638020d243e760cebd303f49ad5d9799bb691756.css?body=1" for ::1 at 2015-10-11 15:19:32 -0400
+
+
+Started GET "/assets/app.self-400625e80bf8125bba9a53a00d7c73e640fbf5eecd2dbd8f175a65c312e81b9f.js?body=1" for ::1 at 2015-10-11 15:19:32 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-11 15:19:32 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 15:19:32 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-11 15:19:32 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-11 15:19:32 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 15:19:32 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-11 15:19:32 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-11 15:19:32 -0400
+
+
+Started GET "/assets/application.self-471fd924e2c455e6a95178d1fc23db20fc5a02f997ed7eac00a6b9b5cbb94961.js?body=1" for ::1 at 2015-10-11 15:19:32 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:19:32 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[36mDecade Load (0.6ms)[0m  [1mSELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:20:45 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (0.4ms)
+Completed 200 OK in 103ms (Views: 101.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:20:45 -0400
+
+
+Started GET "/assets/application.self-2a5411cc9ab2e9c71da40a88afd2a56d23b11ec5ad500d50b71522a54a8ac399.css?body=1" for ::1 at 2015-10-11 15:20:45 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 15:20:45 -0400
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-11 15:20:45 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-11 15:20:45 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-11 15:20:45 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 15:20:45 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-11 15:20:45 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-11 15:20:45 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-11 15:20:45 -0400
+
+
+Started GET "/assets/application.self-471fd924e2c455e6a95178d1fc23db20fc5a02f997ed7eac00a6b9b5cbb94961.js?body=1" for ::1 at 2015-10-11 15:20:45 -0400
+
+
+Started GET "/assets/app.self-400625e80bf8125bba9a53a00d7c73e640fbf5eecd2dbd8f175a65c312e81b9f.js?body=1" for ::1 at 2015-10-11 15:20:45 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:20:45 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[36mDecade Load (0.4ms)[0m  [1mSELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:21:08 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (0.5ms)
+Completed 200 OK in 147ms (Views: 143.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:21:08 -0400
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-11 15:21:08 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-11 15:21:08 -0400
+
+
+Started GET "/assets/application.self-b66817d1c1766a191be2ebeb1ab6b86f016e7a2b340c7f1c9ec531f47e5392b1.css?body=1" for ::1 at 2015-10-11 15:21:08 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 15:21:08 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-11 15:21:08 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 15:21:08 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-11 15:21:08 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-11 15:21:08 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-11 15:21:08 -0400
+
+
+Started GET "/assets/app.self-400625e80bf8125bba9a53a00d7c73e640fbf5eecd2dbd8f175a65c312e81b9f.js?body=1" for ::1 at 2015-10-11 15:21:08 -0400
+
+
+Started GET "/assets/application.self-471fd924e2c455e6a95178d1fc23db20fc5a02f997ed7eac00a6b9b5cbb94961.js?body=1" for ::1 at 2015-10-11 15:21:08 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:21:08 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[36mDecade Load (0.3ms)[0m  [1mSELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-11 15:21:21 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R4GArRdlLEYYhSeqjSSLxppgKYo21kehdrDZAi/eNaIyKPtxuIACZDJM0Vxm90AFd/uiDMz2AOmIfArulB+/bQ==", "username"=>"m", "password"=>"[FILTERED]", "commit"=>"Log-In"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "m"]]
+Redirected to http://localhost:3000/users/profile
+Completed 302 Found in 92ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:21:21 -0400
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (0.4ms)
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:21:22 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1[0m  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[35mDecade Load (0.5ms)[0m  SELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:22:00 -0400
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (1.0ms)
+Completed 200 OK in 413ms (Views: 410.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 15:22:00 -0400
+
+
+Started GET "/assets/application.self-b66817d1c1766a191be2ebeb1ab6b86f016e7a2b340c7f1c9ec531f47e5392b1.css?body=1" for ::1 at 2015-10-11 15:22:00 -0400
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-11 15:22:00 -0400
+
+
+Started GET "/assets/app.self-09628518948408f4de5e1f1db6f0cbf27d1ae8f8737a166b5ac0304eb6a6bd59.js?body=1" for ::1 at 2015-10-11 15:22:00 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-11 15:22:00 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:22:01 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-11 15:22:01 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 15:22:01 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-11 15:22:01 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-11 15:22:01 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-11 15:22:01 -0400
+
+
+Started GET "/assets/application.self-471fd924e2c455e6a95178d1fc23db20fc5a02f997ed7eac00a6b9b5cbb94961.js?body=1" for ::1 at 2015-10-11 15:22:01 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:22:01 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1[0m  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[35mDecade Load (0.4ms)[0m  SELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:24:12 -0400
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (1.8ms)
+Completed 200 OK in 125ms (Views: 121.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:24:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 15:24:13 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-11 15:24:13 -0400
+
+
+Started GET "/assets/application.self-75ac9495bede5198b4c266d662a238598e27b9749603605d2094e64d85677592.css?body=1" for ::1 at 2015-10-11 15:24:13 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-11 15:24:13 -0400
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-11 15:24:13 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 15:24:13 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-11 15:24:13 -0400
+
+
+Started GET "/assets/app.self-09628518948408f4de5e1f1db6f0cbf27d1ae8f8737a166b5ac0304eb6a6bd59.js?body=1" for ::1 at 2015-10-11 15:24:13 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-11 15:24:13 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-11 15:24:13 -0400
+
+
+Started GET "/assets/application.self-471fd924e2c455e6a95178d1fc23db20fc5a02f997ed7eac00a6b9b5cbb94961.js?body=1" for ::1 at 2015-10-11 15:24:13 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:24:13 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1[0m  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[35mDecade Load (0.3ms)[0m  SELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:25:09 -0400
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (0.5ms)
+Completed 200 OK in 87ms (Views: 83.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:25:09 -0400
+
+
+Started GET "/assets/application.self-75ac9495bede5198b4c266d662a238598e27b9749603605d2094e64d85677592.css?body=1" for ::1 at 2015-10-11 15:25:09 -0400
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-11 15:25:09 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 15:25:09 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-11 15:25:09 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-11 15:25:09 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 15:25:09 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-11 15:25:09 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-11 15:25:09 -0400
+
+
+Started GET "/assets/app.self-400625e80bf8125bba9a53a00d7c73e640fbf5eecd2dbd8f175a65c312e81b9f.js?body=1" for ::1 at 2015-10-11 15:25:09 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-11 15:25:09 -0400
+
+
+Started GET "/assets/application.self-471fd924e2c455e6a95178d1fc23db20fc5a02f997ed7eac00a6b9b5cbb94961.js?body=1" for ::1 at 2015-10-11 15:25:09 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:25:10 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1[0m  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[35mDecade Load (0.3ms)[0m  SELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-10-11 15:26:45 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 353ms (Views: 352.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-2473289161fbb225b52b75d02201dca32da8d7e3f2bfc72ec4b83eccf6f77a83.js?body=1" for ::1 at 2015-10-11 15:26:46 -0400
+
+
+Started GET "/users/log_in" for ::1 at 2015-10-11 15:26:49 -0400
+Processing by UsersController#log_in as HTML
+  Rendered users/log_in.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 79ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-11 15:26:52 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WejPJBKdHV7sukCL6nvQDAl4ukbDLA852ePbMHe09b4sQbT4vXgzfMZztn0BqBvP5OMxwDkMSHEnLwjczHV/cQ==", "username"=>"m", "password"=>"[FILTERED]", "commit"=>"Log-In"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "m"]]
+Redirected to http://localhost:3000/users/profile
+Completed 302 Found in 98ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:26:52 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (0.4ms)
+Completed 200 OK in 230ms (Views: 227.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:26:53 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[36mDecade Load (0.3ms)[0m  [1mSELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:30:00 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (0.7ms)
+Completed 200 OK in 391ms (Views: 388.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-11 15:30:01 -0400
+
+
+Started GET "/assets/application.self-75ac9495bede5198b4c266d662a238598e27b9749603605d2094e64d85677592.css?body=1" for ::1 at 2015-10-11 15:30:01 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-11 15:30:01 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-11 15:30:01 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 15:30:01 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:30:01 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 15:30:01 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-11 15:30:01 -0400
+
+
+Started GET "/assets/application.self-d2144f36a45184f0c922cd91c4524b3453241d08a434c7d520d12d8b48a916cf.js?body=1" for ::1 at 2015-10-11 15:30:01 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-11 15:30:01 -0400
+
+
+Started GET "/assets/app.self-2473289161fbb225b52b75d02201dca32da8d7e3f2bfc72ec4b83eccf6f77a83.js?body=1" for ::1 at 2015-10-11 15:30:01 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-11 15:30:01 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:30:01 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[36mDecade Load (0.3ms)[0m  [1mSELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:31:17 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (0.7ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.9ms)
+
+ActionView::Template::Error (couldn't find file 'jquery.ui.slider' with type 'text/css'):
+    2: <html>
+    3: <head>
+    4:   <title>RailsTimeline</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= csrf_meta_tags %>
+    7: 
+    8:   <script type="text/template" id="decade-template">
+  app/assets/stylesheets/application.css:13
+  app/views/layouts/profile_layout.html.erb:5:in `_app_views_layouts_profile_layout_html_erb__1534316494669610683_70098181267400'
+  app/controllers/users_controller.rb:25:in `profile'
+
+
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (115.2ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (87.7ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (174.2ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:32:10 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (0.4ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (couldn't find file 'jquery.ui.slider' with type 'text/css'):
+    2: <html>
+    3: <head>
+    4:   <title>RailsTimeline</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= csrf_meta_tags %>
+    7: 
+    8:   <script type="text/template" id="decade-template">
+  app/assets/stylesheets/application.css:14
+  app/views/layouts/profile_layout.html.erb:5:in `_app_views_layouts_profile_layout_html_erb__1534316494669610683_70098181267400'
+  app/controllers/users_controller.rb:25:in `profile'
+
+
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (71.2ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (96.0ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (178.8ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:32:21 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (0.5ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (couldn't find file 'jquery.ui.slider' with type 'application/javascript'):
+    21:       <%= yield %>
+    22: 
+    23:   </div>
+    24: <%= javascript_include_tag 'users', 'data-turbolinks-track' => true %>
+    25: </body>
+    26: </html>
+  app/assets/javascripts/users.js:6
+  app/views/layouts/profile_layout.html.erb:24:in `_app_views_layouts_profile_layout_html_erb__1534316494669610683_70098181267400'
+  app/controllers/users_controller.rb:25:in `profile'
+
+
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.7ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (78.7ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (52.7ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (136.4ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:34:03 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (0.6ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (couldn't find file 'jquery.ui.slider' with type 'text/css'):
+    2: <html>
+    3: <head>
+    4:   <title>RailsTimeline</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= csrf_meta_tags %>
+    7: 
+    8:   <script type="text/template" id="decade-template">
+  app/assets/stylesheets/application.css:14
+  app/views/layouts/profile_layout.html.erb:5:in `_app_views_layouts_profile_layout_html_erb__1534316494669610683_70098181267400'
+  app/controllers/users_controller.rb:25:in `profile'
+
+
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.7ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.7ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (70.9ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (180.8ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:34:26 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (0.7ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (couldn't find file 'jqueryui' with type 'text/css'):
+    2: <html>
+    3: <head>
+    4:   <title>RailsTimeline</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= csrf_meta_tags %>
+    7: 
+    8:   <script type="text/template" id="decade-template">
+  app/assets/stylesheets/application.css:14
+  app/views/layouts/profile_layout.html.erb:5:in `_app_views_layouts_profile_layout_html_erb__1534316494669610683_70098181267400'
+  app/controllers/users_controller.rb:25:in `profile'
+
+
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.5ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (50.5ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Matt-Air/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (123.4ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:34:39 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (1.3ms)
+Completed 200 OK in 75ms (Views: 71.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:34:39 -0400
+
+
+Started GET "/assets/application.self-75ac9495bede5198b4c266d662a238598e27b9749603605d2094e64d85677592.css?body=1" for ::1 at 2015-10-11 15:34:39 -0400
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-11 15:34:39 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 15:34:39 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-11 15:34:39 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-11 15:34:39 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 15:34:39 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-11 15:34:39 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-11 15:34:39 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-11 15:34:39 -0400
+
+
+Started GET "/assets/application.self-d2144f36a45184f0c922cd91c4524b3453241d08a434c7d520d12d8b48a916cf.js?body=1" for ::1 at 2015-10-11 15:34:39 -0400
+
+
+Started GET "/assets/app.self-2473289161fbb225b52b75d02201dca32da8d7e3f2bfc72ec4b83eccf6f77a83.js?body=1" for ::1 at 2015-10-11 15:34:39 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:34:39 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[36mDecade Load (1.0ms)[0m  [1mSELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:38:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (5.1ms)
+Completed 200 OK in 3936ms (Views: 3871.0ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/assets/jquery-ui/core.self-23329dbe1961b938278306c019037fe36ff6ccb28193f1038e52ccbf52858163.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/accordion.self-ab9f397561a07488cf14279bc7186619e859cdd485b81d3a6439e85b81d32a05.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/menu.self-5277268fc75b8d6e851ccb5ca12e162c7440315d70974f34db800bc70330f135.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-2d6dfccae4fba2fe27d00372b974d4540d75a00cea6ceaa0a6aa33852b9d3ac3.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/theme.self-df1da30301997b52795cb0213bccd335f2897b65f84d1d7d7c63c04f048d902f.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/button.self-524bbf2d9cf9547e14eda3866ad90726890ff390563ea46013c1ca019694c320.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/resizable.self-3a16663ae8d70cc7f633554daff3a5875f54915ae3071fc3f3a1aeb0f7c8ab24.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/draggable.self-ff524fb7ae3023ef910b4e6c5cd7260e4f4dc6fb2eca9a525dd478017639bbba.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar.self-de3d9f82b3ceaaa88bb0686e77f2548a3cfea1cf4dc37df4f3bc70f99d86a95a.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-bf92a2196df590f06fad4ab5bb7ed4db1874a9bef0c9af85ea0490d2108b9966.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/dialog.self-3e41d6ad769c697e76dceeef1bf376008c8e93e85c144fea25437fa3188d86b8.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/selectable.self-fa1d88ada89c5a57dae84c7cb4f17bf153cb1cff063ed4ba2091b5b5f54e77e6.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-9a2b20dc7f10d3a7b09d0dc5d038d02dd1aff160e97abf8eaa3d3f5ab09fbb4b.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/sortable.self-bd8078895e9d12cd8586eb9b507ccb4d533daadd0f103f7387554c30cc96313f.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/slider.self-57c4d255d192836d85e1253fe091b5b01fed1c389b0dbdedd71c129dcf1cfd35.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/spinner.self-2d292d2e83f1281032010a5acb9cb23492aeecdc95395a5d93f2a3bba9a2c400.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/tabs.self-3dec02555ec77af087a252cdd5be276e714d0059e052a2c92dc2c5401e9df63d.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip.self-a349b3ba7b1458eed72dc3ffba597af53b9ceb622e7a324cdfd1c01c7b351f1f.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/base.self-1b94b6a8eaf399d6f662a2ffe0b9b52a958c6180e15b6e07a7ecab0087c9234d.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/all.self-a9629accff9d629face2489f3b6d620ded83dd62f6f04f69e5b33eea2b8d73b6.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/application.self-4eb1c88f7992e9f0b3c21a5ff08d56855ca545304eef5f3978a8bbc4a6beb640.css?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/app.self-2473289161fbb225b52b75d02201dca32da8d7e3f2bfc72ec4b83eccf6f77a83.js?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/accordion.self-c95f320275150a94241b004a91e21eef9c5ae9965a793cb3e2475f6078a1670d.js?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/menu.self-7abc1c9401509a7e4fc609b1e461be6fd17e8116e8fda19cc59d05ba79aefb68.js?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-3befc48aba87cead090cfd014562b2771a662ac6d2c8197b24c08b2d9f3d9f2d.js?body=1" for ::1 at 2015-10-11 15:38:56 -0400
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/droppable.self-a7a2b4c2cec8fc176f51e4e4291d92bfd3eec40b6a580b47fc54c16334d52882.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/effect.self-3acdb29e7da09c8f0195b994d2f04d73bfef50dc539c84fd2c835d964d33e5c1.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/effect-clip.self-7368e4597c32360b162d264ff8bbd0cf9fb1535eb9b4564e6eb7c1db3c774bf3.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/effect-bounce.self-bfcb9288797ecd234ddeedf4fbc5b4c9de94a4e6d8d44e6faa5b5e9836fad9fd.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/effect-blind.self-ed102209d7aa0b7374f3db8478cc7dcff5f9980d3146e8bf9fbfab959c6d5d8a.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/effect-drop.self-294aaa72126ad9c94d6558cca792eb3716754713aca98f18a9dd7c493150ed92.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/effect-explode.self-68e74dc114a52f3f4d7033e40c39196961bdcf439652daa2e98baa115c7bb44b.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fade.self-42d542a5253e0a610717460102ee6bee339c656cc188e491d89eb0779043c963.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fold.self-ad9967f153423916300dbf1104b00f7ad7bbd6a222a0fcc1012ebe251bcb13c8.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/effect-highlight.self-f922b7179ab8ccfa7865141f38865bba0a3d2bdceba7561c27ca14544dbfd996.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/effect-size.self-368aecefa09656a2be5c72dc8e685b120363a3df812134cbd2dd998bafa179fd.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/effect-puff.self-93415831093923a70f671d73e8d0b3d94deb37ac7472a036a4add545f565c166.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/effect-scale.self-884a5abcb6d90fcd9f9a071aa8329638184df688afced1b1d3b6be6c69f4dd7f.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/effect-pulsate.self-eb107c0d136eccdfbd8a2f0f2ee71e0f6911cb300c6b63cc2fe4f6532e6a9a97.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/effect-shake.self-63bcc14897aac5b84e10690be94d64d5724f864aa14c913b4d1030c461a256ad.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/effect-slide.self-c93054a4a80d1f986760806d81ab067e4a4120bf103337e152ecc24d36e785f6.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/effect-transfer.self-181245634ec522320fc1081f6dbf94fd982f34eefa03555f76817dedfcdea336.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar.self-a259ff5a2a5e7aef0ec21bda94edd0f6bc1e9821128d901de415956edf212b0d.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/selectable.self-42e53fc2f95211314e36a8094c42560f869c207f16d68cfc206aa37201dcdc03.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/slider.self-8af8d2a0661743ba88b4cfb99d5c8c874cfa3fc6528ae4e9252366b388def0b7.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/spinner.self-3c8c95a7bc9c877d0f9c16789246bbedda6b8e8fbf5927951babdab775aed02e.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-09dbcac573f0e508194bd9deff254db090889b380d030261857860309c0918e8.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui.self-52111578aa54225c9ebfe06f78a62771020ee548bb27d62228ee3f5e6633969d.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/application.self-d2144f36a45184f0c922cd91c4524b3453241d08a434c7d520d12d8b48a916cf.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip.self-38f04ac3a6c8fb2391ec6832b68845671cc9013a94371b7eb239478f4835eb73.js?body=1" for ::1 at 2015-10-11 15:38:57 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:38:57 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[36mDecade Load (0.6ms)[0m  [1mSELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 53ms (Views: 2.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/jquery-ui/ui-bg_flat_75_ffffff_40x100-39ab7ccd9f4e82579da78a9241265df288d8eb65dbbd7cf48aed2d0129887df5.png" for ::1 at 2015-10-11 15:38:58 -0400
+
+
+Started GET "/assets/jquery-ui/ui-bg_glass_75_e6e6e6_1x400-ddf5dd4e0ef2b185e8bb0af7b6e90ebe74a84384cb4700658e76e754c8bfe550.png" for ::1 at 2015-10-11 15:38:58 -0400
+
+
+Started GET "/assets/jquery-ui/ui-bg_highlight-soft_75_cccccc_1x100-54270656df079c4da5182629a080fc633b6f84b87985eb016d25a560e2c38d4a.png" for ::1 at 2015-10-11 15:38:58 -0400
+
+
+Started GET "/assets/jquery-ui/ui-bg_glass_75_dadada_1x400-c108f5cbf2dd9ec07a26530695ddd95e1664597ce6c056ae44c162cc2e28cec4.png" for ::1 at 2015-10-11 15:39:00 -0400
+
+
+Started GET "/assets/jquery-ui/ui-bg_glass_65_ffffff_1x400-f0e6cd91b837d5c5644d026e5ffeccd907953317cd5c0f689901733afda260b2.png" for ::1 at 2015-10-11 15:39:00 -0400
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:40:43 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (0.4ms)
+Completed 200 OK in 1447ms (Views: 1444.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery-ui/theme.self-df1da30301997b52795cb0213bccd335f2897b65f84d1d7d7c63c04f048d902f.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/core.self-23329dbe1961b938278306c019037fe36ff6ccb28193f1038e52ccbf52858163.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-2d6dfccae4fba2fe27d00372b974d4540d75a00cea6ceaa0a6aa33852b9d3ac3.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/menu.self-5277268fc75b8d6e851ccb5ca12e162c7440315d70974f34db800bc70330f135.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/accordion.self-ab9f397561a07488cf14279bc7186619e859cdd485b81d3a6439e85b81d32a05.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-bf92a2196df590f06fad4ab5bb7ed4db1874a9bef0c9af85ea0490d2108b9966.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/button.self-524bbf2d9cf9547e14eda3866ad90726890ff390563ea46013c1ca019694c320.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/draggable.self-ff524fb7ae3023ef910b4e6c5cd7260e4f4dc6fb2eca9a525dd478017639bbba.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/resizable.self-3a16663ae8d70cc7f633554daff3a5875f54915ae3071fc3f3a1aeb0f7c8ab24.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/selectable.self-fa1d88ada89c5a57dae84c7cb4f17bf153cb1cff063ed4ba2091b5b5f54e77e6.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/dialog.self-3e41d6ad769c697e76dceeef1bf376008c8e93e85c144fea25437fa3188d86b8.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/sortable.self-bd8078895e9d12cd8586eb9b507ccb4d533daadd0f103f7387554c30cc96313f.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-9a2b20dc7f10d3a7b09d0dc5d038d02dd1aff160e97abf8eaa3d3f5ab09fbb4b.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar.self-de3d9f82b3ceaaa88bb0686e77f2548a3cfea1cf4dc37df4f3bc70f99d86a95a.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/slider.self-57c4d255d192836d85e1253fe091b5b01fed1c389b0dbdedd71c129dcf1cfd35.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip.self-a349b3ba7b1458eed72dc3ffba597af53b9ceb622e7a324cdfd1c01c7b351f1f.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/tabs.self-3dec02555ec77af087a252cdd5be276e714d0059e052a2c92dc2c5401e9df63d.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/spinner.self-2d292d2e83f1281032010a5acb9cb23492aeecdc95395a5d93f2a3bba9a2c400.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/all.self-a9629accff9d629face2489f3b6d620ded83dd62f6f04f69e5b33eea2b8d73b6.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/base.self-1b94b6a8eaf399d6f662a2ffe0b9b52a958c6180e15b6e07a7ecab0087c9234d.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/application.self-4eb1c88f7992e9f0b3c21a5ff08d56855ca545304eef5f3978a8bbc4a6beb640.css?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/app.self-84d1895b6f6b31ef05d85c2a736ddab801a7a8b52bdc8b3704538b1de08b2402.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/accordion.self-c95f320275150a94241b004a91e21eef9c5ae9965a793cb3e2475f6078a1670d.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/menu.self-7abc1c9401509a7e4fc609b1e461be6fd17e8116e8fda19cc59d05ba79aefb68.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-3befc48aba87cead090cfd014562b2771a662ac6d2c8197b24c08b2d9f3d9f2d.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/droppable.self-a7a2b4c2cec8fc176f51e4e4291d92bfd3eec40b6a580b47fc54c16334d52882.js?body=1" for ::1 at 2015-10-11 15:40:45 -0400
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/effect.self-3acdb29e7da09c8f0195b994d2f04d73bfef50dc539c84fd2c835d964d33e5c1.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/effect-blind.self-ed102209d7aa0b7374f3db8478cc7dcff5f9980d3146e8bf9fbfab959c6d5d8a.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/effect-bounce.self-bfcb9288797ecd234ddeedf4fbc5b4c9de94a4e6d8d44e6faa5b5e9836fad9fd.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/effect-drop.self-294aaa72126ad9c94d6558cca792eb3716754713aca98f18a9dd7c493150ed92.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/effect-clip.self-7368e4597c32360b162d264ff8bbd0cf9fb1535eb9b4564e6eb7c1db3c774bf3.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fade.self-42d542a5253e0a610717460102ee6bee339c656cc188e491d89eb0779043c963.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/effect-explode.self-68e74dc114a52f3f4d7033e40c39196961bdcf439652daa2e98baa115c7bb44b.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fold.self-ad9967f153423916300dbf1104b00f7ad7bbd6a222a0fcc1012ebe251bcb13c8.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/effect-highlight.self-f922b7179ab8ccfa7865141f38865bba0a3d2bdceba7561c27ca14544dbfd996.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/effect-size.self-368aecefa09656a2be5c72dc8e685b120363a3df812134cbd2dd998bafa179fd.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/effect-scale.self-884a5abcb6d90fcd9f9a071aa8329638184df688afced1b1d3b6be6c69f4dd7f.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/effect-puff.self-93415831093923a70f671d73e8d0b3d94deb37ac7472a036a4add545f565c166.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/effect-pulsate.self-eb107c0d136eccdfbd8a2f0f2ee71e0f6911cb300c6b63cc2fe4f6532e6a9a97.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/effect-slide.self-c93054a4a80d1f986760806d81ab067e4a4120bf103337e152ecc24d36e785f6.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/effect-shake.self-63bcc14897aac5b84e10690be94d64d5724f864aa14c913b4d1030c461a256ad.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/effect-transfer.self-181245634ec522320fc1081f6dbf94fd982f34eefa03555f76817dedfcdea336.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar.self-a259ff5a2a5e7aef0ec21bda94edd0f6bc1e9821128d901de415956edf212b0d.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-09dbcac573f0e508194bd9deff254db090889b380d030261857860309c0918e8.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/slider.self-8af8d2a0661743ba88b4cfb99d5c8c874cfa3fc6528ae4e9252366b388def0b7.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/selectable.self-42e53fc2f95211314e36a8094c42560f869c207f16d68cfc206aa37201dcdc03.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/spinner.self-3c8c95a7bc9c877d0f9c16789246bbedda6b8e8fbf5927951babdab775aed02e.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip.self-38f04ac3a6c8fb2391ec6832b68845671cc9013a94371b7eb239478f4835eb73.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/jquery-ui.self-52111578aa54225c9ebfe06f78a62771020ee548bb27d62228ee3f5e6633969d.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/assets/application.self-d2144f36a45184f0c922cd91c4524b3453241d08a434c7d520d12d8b48a916cf.js?body=1" for ::1 at 2015-10-11 15:40:46 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:40:46 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[36mDecade Load (0.4ms)[0m  [1mSELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:41:08 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (0.3ms)
+Completed 200 OK in 1472ms (Views: 1469.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery-ui/core.self-23329dbe1961b938278306c019037fe36ff6ccb28193f1038e52ccbf52858163.css?body=1" for ::1 at 2015-10-11 15:41:09 -0400
+
+
+Started GET "/assets/jquery-ui/theme.self-df1da30301997b52795cb0213bccd335f2897b65f84d1d7d7c63c04f048d902f.css?body=1" for ::1 at 2015-10-11 15:41:09 -0400
+
+
+Started GET "/assets/jquery-ui/menu.self-5277268fc75b8d6e851ccb5ca12e162c7440315d70974f34db800bc70330f135.css?body=1" for ::1 at 2015-10-11 15:41:09 -0400
+
+
+Started GET "/assets/jquery-ui/accordion.self-ab9f397561a07488cf14279bc7186619e859cdd485b81d3a6439e85b81d32a05.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-2d6dfccae4fba2fe27d00372b974d4540d75a00cea6ceaa0a6aa33852b9d3ac3.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/resizable.self-3a16663ae8d70cc7f633554daff3a5875f54915ae3071fc3f3a1aeb0f7c8ab24.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/draggable.self-ff524fb7ae3023ef910b4e6c5cd7260e4f4dc6fb2eca9a525dd478017639bbba.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/button.self-524bbf2d9cf9547e14eda3866ad90726890ff390563ea46013c1ca019694c320.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-bf92a2196df590f06fad4ab5bb7ed4db1874a9bef0c9af85ea0490d2108b9966.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar.self-de3d9f82b3ceaaa88bb0686e77f2548a3cfea1cf4dc37df4f3bc70f99d86a95a.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/dialog.self-3e41d6ad769c697e76dceeef1bf376008c8e93e85c144fea25437fa3188d86b8.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/selectable.self-fa1d88ada89c5a57dae84c7cb4f17bf153cb1cff063ed4ba2091b5b5f54e77e6.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-9a2b20dc7f10d3a7b09d0dc5d038d02dd1aff160e97abf8eaa3d3f5ab09fbb4b.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/sortable.self-bd8078895e9d12cd8586eb9b507ccb4d533daadd0f103f7387554c30cc96313f.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/slider.self-57c4d255d192836d85e1253fe091b5b01fed1c389b0dbdedd71c129dcf1cfd35.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/spinner.self-2d292d2e83f1281032010a5acb9cb23492aeecdc95395a5d93f2a3bba9a2c400.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/tabs.self-3dec02555ec77af087a252cdd5be276e714d0059e052a2c92dc2c5401e9df63d.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip.self-a349b3ba7b1458eed72dc3ffba597af53b9ceb622e7a324cdfd1c01c7b351f1f.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/base.self-1b94b6a8eaf399d6f662a2ffe0b9b52a958c6180e15b6e07a7ecab0087c9234d.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/all.self-a9629accff9d629face2489f3b6d620ded83dd62f6f04f69e5b33eea2b8d73b6.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/application.self-4eb1c88f7992e9f0b3c21a5ff08d56855ca545304eef5f3978a8bbc4a6beb640.css?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/app.self-90288b662a661f2c99f8fe0424650545d5997d504811127a1c0d120d2a448841.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/accordion.self-c95f320275150a94241b004a91e21eef9c5ae9965a793cb3e2475f6078a1670d.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-3befc48aba87cead090cfd014562b2771a662ac6d2c8197b24c08b2d9f3d9f2d.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/menu.self-7abc1c9401509a7e4fc609b1e461be6fd17e8116e8fda19cc59d05ba79aefb68.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/droppable.self-a7a2b4c2cec8fc176f51e4e4291d92bfd3eec40b6a580b47fc54c16334d52882.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/effect-blind.self-ed102209d7aa0b7374f3db8478cc7dcff5f9980d3146e8bf9fbfab959c6d5d8a.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/effect-bounce.self-bfcb9288797ecd234ddeedf4fbc5b4c9de94a4e6d8d44e6faa5b5e9836fad9fd.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/effect.self-3acdb29e7da09c8f0195b994d2f04d73bfef50dc539c84fd2c835d964d33e5c1.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/effect-clip.self-7368e4597c32360b162d264ff8bbd0cf9fb1535eb9b4564e6eb7c1db3c774bf3.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/effect-drop.self-294aaa72126ad9c94d6558cca792eb3716754713aca98f18a9dd7c493150ed92.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/effect-explode.self-68e74dc114a52f3f4d7033e40c39196961bdcf439652daa2e98baa115c7bb44b.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/effect-highlight.self-f922b7179ab8ccfa7865141f38865bba0a3d2bdceba7561c27ca14544dbfd996.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fold.self-ad9967f153423916300dbf1104b00f7ad7bbd6a222a0fcc1012ebe251bcb13c8.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fade.self-42d542a5253e0a610717460102ee6bee339c656cc188e491d89eb0779043c963.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/effect-size.self-368aecefa09656a2be5c72dc8e685b120363a3df812134cbd2dd998bafa179fd.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/effect-scale.self-884a5abcb6d90fcd9f9a071aa8329638184df688afced1b1d3b6be6c69f4dd7f.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/effect-puff.self-93415831093923a70f671d73e8d0b3d94deb37ac7472a036a4add545f565c166.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/effect-shake.self-63bcc14897aac5b84e10690be94d64d5724f864aa14c913b4d1030c461a256ad.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/effect-transfer.self-181245634ec522320fc1081f6dbf94fd982f34eefa03555f76817dedfcdea336.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar.self-a259ff5a2a5e7aef0ec21bda94edd0f6bc1e9821128d901de415956edf212b0d.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/effect-slide.self-c93054a4a80d1f986760806d81ab067e4a4120bf103337e152ecc24d36e785f6.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/effect-pulsate.self-eb107c0d136eccdfbd8a2f0f2ee71e0f6911cb300c6b63cc2fe4f6532e6a9a97.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/selectable.self-42e53fc2f95211314e36a8094c42560f869c207f16d68cfc206aa37201dcdc03.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-09dbcac573f0e508194bd9deff254db090889b380d030261857860309c0918e8.js?body=1" for ::1 at 2015-10-11 15:41:10 -0400
+
+
+Started GET "/assets/jquery-ui/slider.self-8af8d2a0661743ba88b4cfb99d5c8c874cfa3fc6528ae4e9252366b388def0b7.js?body=1" for ::1 at 2015-10-11 15:41:11 -0400
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for ::1 at 2015-10-11 15:41:11 -0400
+
+
+Started GET "/assets/jquery-ui/spinner.self-3c8c95a7bc9c877d0f9c16789246bbedda6b8e8fbf5927951babdab775aed02e.js?body=1" for ::1 at 2015-10-11 15:41:11 -0400
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for ::1 at 2015-10-11 15:41:11 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip.self-38f04ac3a6c8fb2391ec6832b68845671cc9013a94371b7eb239478f4835eb73.js?body=1" for ::1 at 2015-10-11 15:41:11 -0400
+
+
+Started GET "/assets/jquery-ui.self-52111578aa54225c9ebfe06f78a62771020ee548bb27d62228ee3f5e6633969d.js?body=1" for ::1 at 2015-10-11 15:41:11 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-11 15:41:11 -0400
+
+
+Started GET "/assets/application.self-d2144f36a45184f0c922cd91c4524b3453241d08a434c7d520d12d8b48a916cf.js?body=1" for ::1 at 2015-10-11 15:41:11 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:41:11 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[36mDecade Load (0.3ms)[0m  [1mSELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:41:41 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (1.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (0.7ms)
+Completed 200 OK in 1069ms (Views: 1065.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:41:42 -0400
+
+
+Started GET "/assets/jquery-ui/theme.self-df1da30301997b52795cb0213bccd335f2897b65f84d1d7d7c63c04f048d902f.css?body=1" for ::1 at 2015-10-11 15:41:42 -0400
+
+
+Started GET "/assets/jquery-ui/accordion.self-ab9f397561a07488cf14279bc7186619e859cdd485b81d3a6439e85b81d32a05.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/menu.self-5277268fc75b8d6e851ccb5ca12e162c7440315d70974f34db800bc70330f135.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-2d6dfccae4fba2fe27d00372b974d4540d75a00cea6ceaa0a6aa33852b9d3ac3.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/core.self-23329dbe1961b938278306c019037fe36ff6ccb28193f1038e52ccbf52858163.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-bf92a2196df590f06fad4ab5bb7ed4db1874a9bef0c9af85ea0490d2108b9966.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/draggable.self-ff524fb7ae3023ef910b4e6c5cd7260e4f4dc6fb2eca9a525dd478017639bbba.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/resizable.self-3a16663ae8d70cc7f633554daff3a5875f54915ae3071fc3f3a1aeb0f7c8ab24.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/button.self-524bbf2d9cf9547e14eda3866ad90726890ff390563ea46013c1ca019694c320.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/dialog.self-3e41d6ad769c697e76dceeef1bf376008c8e93e85c144fea25437fa3188d86b8.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar.self-de3d9f82b3ceaaa88bb0686e77f2548a3cfea1cf4dc37df4f3bc70f99d86a95a.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/selectable.self-fa1d88ada89c5a57dae84c7cb4f17bf153cb1cff063ed4ba2091b5b5f54e77e6.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-9a2b20dc7f10d3a7b09d0dc5d038d02dd1aff160e97abf8eaa3d3f5ab09fbb4b.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/sortable.self-bd8078895e9d12cd8586eb9b507ccb4d533daadd0f103f7387554c30cc96313f.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/slider.self-57c4d255d192836d85e1253fe091b5b01fed1c389b0dbdedd71c129dcf1cfd35.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/spinner.self-2d292d2e83f1281032010a5acb9cb23492aeecdc95395a5d93f2a3bba9a2c400.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/application.self-61791908fa3c1285915332e06ce236244124891d7f80a32ef62d551da6db5413.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip.self-a349b3ba7b1458eed72dc3ffba597af53b9ceb622e7a324cdfd1c01c7b351f1f.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/tabs.self-3dec02555ec77af087a252cdd5be276e714d0059e052a2c92dc2c5401e9df63d.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/all.self-a9629accff9d629face2489f3b6d620ded83dd62f6f04f69e5b33eea2b8d73b6.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/base.self-1b94b6a8eaf399d6f662a2ffe0b9b52a958c6180e15b6e07a7ecab0087c9234d.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/app.self-90288b662a661f2c99f8fe0424650545d5997d504811127a1c0d120d2a448841.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/accordion.self-c95f320275150a94241b004a91e21eef9c5ae9965a793cb3e2475f6078a1670d.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-3befc48aba87cead090cfd014562b2771a662ac6d2c8197b24c08b2d9f3d9f2d.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/menu.self-7abc1c9401509a7e4fc609b1e461be6fd17e8116e8fda19cc59d05ba79aefb68.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/droppable.self-a7a2b4c2cec8fc176f51e4e4291d92bfd3eec40b6a580b47fc54c16334d52882.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/effect.self-3acdb29e7da09c8f0195b994d2f04d73bfef50dc539c84fd2c835d964d33e5c1.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/effect-blind.self-ed102209d7aa0b7374f3db8478cc7dcff5f9980d3146e8bf9fbfab959c6d5d8a.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/effect-clip.self-7368e4597c32360b162d264ff8bbd0cf9fb1535eb9b4564e6eb7c1db3c774bf3.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/effect-bounce.self-bfcb9288797ecd234ddeedf4fbc5b4c9de94a4e6d8d44e6faa5b5e9836fad9fd.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/effect-explode.self-68e74dc114a52f3f4d7033e40c39196961bdcf439652daa2e98baa115c7bb44b.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/effect-drop.self-294aaa72126ad9c94d6558cca792eb3716754713aca98f18a9dd7c493150ed92.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fade.self-42d542a5253e0a610717460102ee6bee339c656cc188e491d89eb0779043c963.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/effect-highlight.self-f922b7179ab8ccfa7865141f38865bba0a3d2bdceba7561c27ca14544dbfd996.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fold.self-ad9967f153423916300dbf1104b00f7ad7bbd6a222a0fcc1012ebe251bcb13c8.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/effect-size.self-368aecefa09656a2be5c72dc8e685b120363a3df812134cbd2dd998bafa179fd.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/effect-scale.self-884a5abcb6d90fcd9f9a071aa8329638184df688afced1b1d3b6be6c69f4dd7f.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/effect-puff.self-93415831093923a70f671d73e8d0b3d94deb37ac7472a036a4add545f565c166.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/effect-shake.self-63bcc14897aac5b84e10690be94d64d5724f864aa14c913b4d1030c461a256ad.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/effect-pulsate.self-eb107c0d136eccdfbd8a2f0f2ee71e0f6911cb300c6b63cc2fe4f6532e6a9a97.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/effect-slide.self-c93054a4a80d1f986760806d81ab067e4a4120bf103337e152ecc24d36e785f6.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/effect-transfer.self-181245634ec522320fc1081f6dbf94fd982f34eefa03555f76817dedfcdea336.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar.self-a259ff5a2a5e7aef0ec21bda94edd0f6bc1e9821128d901de415956edf212b0d.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/selectable.self-42e53fc2f95211314e36a8094c42560f869c207f16d68cfc206aa37201dcdc03.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-09dbcac573f0e508194bd9deff254db090889b380d030261857860309c0918e8.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/slider.self-8af8d2a0661743ba88b4cfb99d5c8c874cfa3fc6528ae4e9252366b388def0b7.js?body=1" for ::1 at 2015-10-11 15:41:43 -0400
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for ::1 at 2015-10-11 15:41:44 -0400
+
+
+Started GET "/assets/jquery-ui/spinner.self-3c8c95a7bc9c877d0f9c16789246bbedda6b8e8fbf5927951babdab775aed02e.js?body=1" for ::1 at 2015-10-11 15:41:44 -0400
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for ::1 at 2015-10-11 15:41:44 -0400
+
+
+Started GET "/assets/jquery-ui.self-52111578aa54225c9ebfe06f78a62771020ee548bb27d62228ee3f5e6633969d.js?body=1" for ::1 at 2015-10-11 15:41:44 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip.self-38f04ac3a6c8fb2391ec6832b68845671cc9013a94371b7eb239478f4835eb73.js?body=1" for ::1 at 2015-10-11 15:41:44 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-11 15:41:44 -0400
+
+
+Started GET "/assets/application.self-d2144f36a45184f0c922cd91c4524b3453241d08a434c7d520d12d8b48a916cf.js?body=1" for ::1 at 2015-10-11 15:41:44 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:41:44 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[36mDecade Load (0.3ms)[0m  [1mSELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-10-11 15:42:29 -0400
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/profile_layout (1.7ms)
+Completed 200 OK in 894ms (Views: 891.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/accordion.self-ab9f397561a07488cf14279bc7186619e859cdd485b81d3a6439e85b81d32a05.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/core.self-23329dbe1961b938278306c019037fe36ff6ccb28193f1038e52ccbf52858163.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-2d6dfccae4fba2fe27d00372b974d4540d75a00cea6ceaa0a6aa33852b9d3ac3.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/theme.self-df1da30301997b52795cb0213bccd335f2897b65f84d1d7d7c63c04f048d902f.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/menu.self-5277268fc75b8d6e851ccb5ca12e162c7440315d70974f34db800bc70330f135.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/button.self-524bbf2d9cf9547e14eda3866ad90726890ff390563ea46013c1ca019694c320.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-bf92a2196df590f06fad4ab5bb7ed4db1874a9bef0c9af85ea0490d2108b9966.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/draggable.self-ff524fb7ae3023ef910b4e6c5cd7260e4f4dc6fb2eca9a525dd478017639bbba.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/resizable.self-3a16663ae8d70cc7f633554daff3a5875f54915ae3071fc3f3a1aeb0f7c8ab24.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/dialog.self-3e41d6ad769c697e76dceeef1bf376008c8e93e85c144fea25437fa3188d86b8.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar.self-de3d9f82b3ceaaa88bb0686e77f2548a3cfea1cf4dc37df4f3bc70f99d86a95a.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/selectable.self-fa1d88ada89c5a57dae84c7cb4f17bf153cb1cff063ed4ba2091b5b5f54e77e6.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-9a2b20dc7f10d3a7b09d0dc5d038d02dd1aff160e97abf8eaa3d3f5ab09fbb4b.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/sortable.self-bd8078895e9d12cd8586eb9b507ccb4d533daadd0f103f7387554c30cc96313f.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/slider.self-57c4d255d192836d85e1253fe091b5b01fed1c389b0dbdedd71c129dcf1cfd35.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/spinner.self-2d292d2e83f1281032010a5acb9cb23492aeecdc95395a5d93f2a3bba9a2c400.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/tabs.self-3dec02555ec77af087a252cdd5be276e714d0059e052a2c92dc2c5401e9df63d.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip.self-a349b3ba7b1458eed72dc3ffba597af53b9ceb622e7a324cdfd1c01c7b351f1f.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/base.self-1b94b6a8eaf399d6f662a2ffe0b9b52a958c6180e15b6e07a7ecab0087c9234d.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/application.self-4eb1c88f7992e9f0b3c21a5ff08d56855ca545304eef5f3978a8bbc4a6beb640.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/all.self-a9629accff9d629face2489f3b6d620ded83dd62f6f04f69e5b33eea2b8d73b6.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery.self-93aeb694ecae8dda5d219429e8bbeb3ec854c112a880b41c8241a2e6decd5807.js?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jqueryui.self-ef9b962e869a815adb51e633eb7d5cc5ddb8bdad94e97ad2461759d77273e9fa.js?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery.serializejson.self-c480e85ec7f2b02efd59ab693b310ece9aaac9ce35b2b7f9fc817a27d5ee0a79.js?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/app.self-90288b662a661f2c99f8fe0424650545d5997d504811127a1c0d120d2a448841.js?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/accordion.self-c95f320275150a94241b004a91e21eef9c5ae9965a793cb3e2475f6078a1670d.js?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for ::1 at 2015-10-11 15:42:30 -0400
+
+
+Started GET "/assets/jquery-ui/menu.self-7abc1c9401509a7e4fc609b1e461be6fd17e8116e8fda19cc59d05ba79aefb68.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-3befc48aba87cead090cfd014562b2771a662ac6d2c8197b24c08b2d9f3d9f2d.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/droppable.self-a7a2b4c2cec8fc176f51e4e4291d92bfd3eec40b6a580b47fc54c16334d52882.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/effect-blind.self-ed102209d7aa0b7374f3db8478cc7dcff5f9980d3146e8bf9fbfab959c6d5d8a.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/effect-bounce.self-bfcb9288797ecd234ddeedf4fbc5b4c9de94a4e6d8d44e6faa5b5e9836fad9fd.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/effect.self-3acdb29e7da09c8f0195b994d2f04d73bfef50dc539c84fd2c835d964d33e5c1.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/effect-clip.self-7368e4597c32360b162d264ff8bbd0cf9fb1535eb9b4564e6eb7c1db3c774bf3.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/effect-drop.self-294aaa72126ad9c94d6558cca792eb3716754713aca98f18a9dd7c493150ed92.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fade.self-42d542a5253e0a610717460102ee6bee339c656cc188e491d89eb0779043c963.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/effect-explode.self-68e74dc114a52f3f4d7033e40c39196961bdcf439652daa2e98baa115c7bb44b.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fold.self-ad9967f153423916300dbf1104b00f7ad7bbd6a222a0fcc1012ebe251bcb13c8.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/effect-highlight.self-f922b7179ab8ccfa7865141f38865bba0a3d2bdceba7561c27ca14544dbfd996.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/effect-size.self-368aecefa09656a2be5c72dc8e685b120363a3df812134cbd2dd998bafa179fd.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/effect-scale.self-884a5abcb6d90fcd9f9a071aa8329638184df688afced1b1d3b6be6c69f4dd7f.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/effect-puff.self-93415831093923a70f671d73e8d0b3d94deb37ac7472a036a4add545f565c166.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/effect-pulsate.self-eb107c0d136eccdfbd8a2f0f2ee71e0f6911cb300c6b63cc2fe4f6532e6a9a97.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/effect-shake.self-63bcc14897aac5b84e10690be94d64d5724f864aa14c913b4d1030c461a256ad.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/effect-slide.self-c93054a4a80d1f986760806d81ab067e4a4120bf103337e152ecc24d36e785f6.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/effect-transfer.self-181245634ec522320fc1081f6dbf94fd982f34eefa03555f76817dedfcdea336.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar.self-a259ff5a2a5e7aef0ec21bda94edd0f6bc1e9821128d901de415956edf212b0d.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-09dbcac573f0e508194bd9deff254db090889b380d030261857860309c0918e8.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/selectable.self-42e53fc2f95211314e36a8094c42560f869c207f16d68cfc206aa37201dcdc03.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/slider.self-8af8d2a0661743ba88b4cfb99d5c8c874cfa3fc6528ae4e9252366b388def0b7.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/spinner.self-3c8c95a7bc9c877d0f9c16789246bbedda6b8e8fbf5927951babdab775aed02e.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip.self-38f04ac3a6c8fb2391ec6832b68845671cc9013a94371b7eb239478f4835eb73.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/jquery-ui.self-52111578aa54225c9ebfe06f78a62771020ee548bb27d62228ee3f5e6633969d.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/users.self-b112aa263d23ed39f359783c977f0f02bddfbf14ee3ba24ec970a365ccc2bcc9.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/assets/application.self-d2144f36a45184f0c922cd91c4524b3453241d08a434c7d520d12d8b48a916cf.js?body=1" for ::1 at 2015-10-11 15:42:31 -0400
+
+
+Started GET "/api/decades" for ::1 at 2015-10-11 15:42:31 -0400
+Processing by Api::DecadesController#index as JSON
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT 1  [["token", "iSIHyIHhrEp04uvM8t9sEg"]]
+  [1m[36mDecade Load (0.4ms)[0m  [1mSELECT "decades".* FROM "decades" WHERE "decades"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.8ms)
