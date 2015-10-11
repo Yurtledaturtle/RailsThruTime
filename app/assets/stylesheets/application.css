@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+  background-image: url('http://bestpixgallery.com/images/8n/8ntg8br.png');
+  background-size: cover;
+  width: 100%;
+  overflow: scroll;
+  color: white;
+}
+.players{
+  margin-left: 50%;
+  margin-right: 50%;
+}
+.timeline{
+  display: inline-block;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+#user-content{
+  width: 20%;
+  text-align: center;
+  margin-left: 50%;
+  margin-right: 50%;
+  color: black;
+  background: white;
+  display: inline-block;
+}

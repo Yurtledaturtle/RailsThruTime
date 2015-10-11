@@ -1,7 +1,28 @@
 <input type="hidden" id='api-token' value="<%= @user.token %>">
 
-<iframe src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:5Z7ygHQo02SUrFmcgpwsKW,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<div class="players">
+  <iframe id="1900player" src="https://embed.spotify.com/?uri=spotify:trackset:1900s:7dzUZec5MnWMyQnk5klnKR,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
+  <iframe id="1910player" src="https://embed.spotify.com/?uri=spotify:trackset:1910s:7dzUZec5MnWMyQnk5klnKR,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
+  <iframe id="1920player" src="https://embed.spotify.com/?uri=spotify:trackset:1920s:7dzUZec5MnWMyQnk5klnKR,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
+  <iframe id="1930player" src="https://embed.spotify.com/?uri=spotify:trackset:1930s:7dzUZec5MnWMyQnk5klnKR,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
+  <iframe id="1940player" src="https://embed.spotify.com/?uri=spotify:trackset:1940s:7dzUZec5MnWMyQnk5klnKR,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
+  <iframe id="1950player" src="https://embed.spotify.com/?uri=spotify:trackset:1950s:7dzUZec5MnWMyQnk5klnKR,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
+  <iframe id="1960player" src="https://embed.spotify.com/?uri=spotify:trackset:1960s:7dzUZec5MnWMyQnk5klnKR,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
+  <iframe id="1970player" src="https://embed.spotify.com/?uri=spotify:trackset:1970s:7dzUZec5MnWMyQnk5klnKR,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
+  <iframe id="1980player" src="https://embed.spotify.com/?uri=spotify:trackset:1980s:7dzUZec5MnWMyQnk5klnKR,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
+  <iframe id="1990player" src="https://embed.spotify.com/?uri=spotify:trackset:1990s:7dzUZec5MnWMyQnk5klnKR,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
+  <iframe id="2000player" src="https://embed.spotify.com/?uri=spotify:trackset:2000s:7dzUZec5MnWMyQnk5klnKR,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
+  <iframe id="2010player" src="https://embed.spotify.com/?uri=spotify:trackset:2010s:7dzUZec5MnWMyQnk5klnKR,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
+</div>
 
+</br>
+<div class="timeline">
+  <div id="1990">1990</div>
+  <div id="2000">2000</div>
+  <div id="2010">2010</div>
+</div>
+</br>
+<div id="user-content">
 
 <h3>Welcome Back <%= @user.username %></h3>
 
@@ -11,6 +32,8 @@
   <input type="text" id="decade-comment" name="decades[comment]">
   <input type="submit" value="Go!">
 </form>
+
+</div>
 
 <section id="decades-list">
 </section>
