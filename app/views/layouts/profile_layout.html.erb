@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsTimeline</title>
+  <title>Music Timeline</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
   <script type="text/template" id="decade-template">
-    <div>
+    <div id="comment">
       <%%= comment %>
     </div>
     <button type="button" id="removebutton" class='remove'>
-      Remove
+      X
     </button>
   </script>
 

@@ -20,6 +20,7 @@ var DecadeCollection = Backbone.Collection.extend({
 // Views
 var DecadeView = Backbone.View.extend({
   tagName: 'div',
+  className: 'stuff',
   template: _.template( $('#decade-template').html() ),
   render: function(){
     this.$el.empty();
@@ -120,9 +121,10 @@ $('form.create-decade').on('submit', function(e){
           $("#1990player").hide();
           $("#2000player").hide();
           $("#2010player").hide();
-      });
-      $("#1900").click(function(){
+
           $("#1900player").show();
+          $('body').css("background-image", "none");
+          $('body').css("background-image", "url(http://www.richwooders.com/book/richwood_1900/oakford-ave_1900_705-448.jpg)");
       });
   }
 
@@ -139,9 +141,10 @@ $('form.create-decade').on('submit', function(e){
           $("#1990player").hide();
           $("#2000player").hide();
           $("#2010player").hide();
-      });
-      $("#1910").click(function(){
+
           $("#1910player").show();
+          $('body').css("background-image", "none");
+          $('body').css("background-image", "url(http://www.martinturnbull.com/wp-content/uploads/2013/07/5th_and_olive_los_angeles_1910.jpg)");
       });
   }
 
@@ -158,9 +161,10 @@ $('form.create-decade').on('submit', function(e){
           $("#1990player").hide();
           $("#2000player").hide();
           $("#2010player").hide();
-      });
-      $("#1920").click(function(){
+
           $("#1920player").show();
+          $('body').css("background-image", "none");
+          $('body').css("background-image", "url(http://www.rootsweb.ancestry.com/~arbradle/places/images/warren_main_st_1920s_lg.jpg)");
       });
   }
 
@@ -179,9 +183,10 @@ $('form.create-decade').on('submit', function(e){
           $("#1990player").hide();
           $("#2000player").hide();
           $("#2010player").hide();
-      });
-      $("#1930").click(function(){
+
           $("#1930player").show();
+          $('body').css("background-image", "none");
+          $('body').css("background-image", "url(http://www.carstyling.ru/resources/entries/3595/Burney_Streamline_London_Sep-15_1930.jpg)");
       });
   }
 
@@ -198,9 +203,10 @@ $('form.create-decade').on('submit', function(e){
           $("#1990player").hide();
           $("#2000player").hide();
           $("#2010player").hide();
-      });
-      $("#1940").click(function(){
+
           $("#1940player").show();
+          $('body').css("background-image", "none");
+          $('body').css("background-image", "url(http://media.timeout.com/images/100689971/image.jpg)");
       });
   }
 
@@ -217,9 +223,10 @@ $('form.create-decade').on('submit', function(e){
           $("#1990player").hide();
           $("#2000player").hide();
           $("#2010player").hide();
-      });
-      $("#1950").click(function(){
+
           $("#1950player").show();
+          $('body').css("background-image", "none");
+          $('body').css("background-image", "url(https://playingintheworldgame.files.wordpress.com/2014/02/new-york-1950-1a.jpg)");
       });
   }
 
@@ -236,9 +243,10 @@ $('form.create-decade').on('submit', function(e){
           $("#1990player").hide();
           $("#2000player").hide();
           $("#2010player").hide();
-      });
-      $("#1960").click(function(){
+
           $("#1960player").show();
+          $('body').css("background-image", "none");
+          $('body').css("background-image", "url(http://www.allthingsgomusic.com/wp-content/uploads/2011/10/new_york_city_time_square_at_night_1960s.jpg)");
       });
   }
 
@@ -255,9 +263,10 @@ $('form.create-decade').on('submit', function(e){
           $("#1990player").hide();
           $("#2000player").hide();
           $("#2010player").hide();
-      });
-      $("#1970").click(function(){
+
           $("#1970player").show();
+          $('body').css("background-image", "none");
+          $('body').css("background-image", "url(http://41.media.tumblr.com/3ed23f9b5649126439df0c7a101289a3/tumblr_nkg8dmRLZL1qzng72o7_1280.jpg)");
       });
   }
 
@@ -274,9 +283,10 @@ $('form.create-decade').on('submit', function(e){
           $("#1990player").hide();
           $("#2000player").hide();
           $("#2010player").hide();
-      });
-      $("#1980").click(function(){
+
           $("#1980player").show();
+          $('body').css("background-image", "none");
+          $('body').css("background-image", "url(https://i.ytimg.com/vi/9wjlVskJHYY/maxresdefault.jpg)");
       });
 }
 
@@ -293,9 +303,10 @@ function show1990(){
         $("#1980player").hide();
         $("#2000player").hide();
         $("#2010player").hide();
-    });
-    $("#1990").click(function(){
+
         $("#1990player").show();
+        $('body').css("background-image", "none");
+        $('body').css("background-image", "url(https://swarneidat.files.wordpress.com/2009/10/timessquare1995.jpg)");
     });
   }
 
@@ -312,9 +323,10 @@ function show1990(){
           $("#1980player").hide();
           $("#1990player").hide();
           $("#2010player").hide();
-      });
-      $("#2000").click(function(){
+
           $("#2000player").show();
+          $('body').css("background-image", "none");
+          $('body').css("background-image", "url(http://static01.nyt.com/images/2014/03/16/realestate/16COVER1_SPAN/16COVER1_SPAN-master675-v2.jpg)");
       });
   }
   function show2010(){
@@ -330,9 +342,10 @@ function show1990(){
         $("#1980player").hide();
         $("#1990player").hide();
         $("#2000player").hide();
-    });
-    $("#2010").click(function(){
+
         $("#2010player").show();
+        $('body').css("background-image", "none");
+        $('body').css("background-image", "url(http://www.utica.edu/student-blogs/wp-content/uploads/2014/03/Times-square-manhattan-new-york-nyc-crossroads-world.jpg)");
     });
 }
 
