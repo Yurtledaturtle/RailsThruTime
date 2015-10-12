@@ -19,6 +19,6 @@ https://railstimeline.herokuapp.com/
   - Spotify Web Player
 
 ## Screenshots
-![](RailsThruTime/screenshots/main.png)
-![](RailsThruTime/screenshots/1950.png)
-![](RailsThruTime/screenshots/2000.png)
+<img src="screenshots/1950.png" alt="screenshot" width="750px">
+<img src="screenshots/2000.png" alt="screenshot" width="750px">
+<img src="screenshots/main.png" alt="screenshot" width="750px">
