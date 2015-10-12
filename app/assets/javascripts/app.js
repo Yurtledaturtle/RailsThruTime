@@ -76,38 +76,208 @@ $('form.create-decade').on('submit', function(e){
   decades.create({comment: newComment});
 });
 
-function slider(){
-  $( "#timeline" ).slider({
-      orientation: "horizontal",
-      range: "min",
-      min: 1900,
-      max: 2010,
-      step: 10,
-      value: 2010,
-      slide: function( event, ui ) {
-        $( "#amount" ).val( ui.value );
-      }
-    });
-    $( "#amount" ).val( $( "#timeline" ).slider( "value" ) );
+// function slider(){
+//   $( "#timeline" ).slider({
+//       orientation: "horizontal",
+//       range: "min",
+//       min: 1900,
+//       max: 2010,
+//       step: 10,
+//       value: 1900,
+//       slide: function( event, ui ) {
+//         var stuff = $( "#amount" ).val( ui.value );
+//       }
+//     });
+//     $( "#amount" ).val( $( "#timeline" ).slider( "value" ) );
+//   }
+//     slider();
+
+  function hidePlayers(){
+    $("#1900player").hide();
+    $("#1910player").hide();
+    $("#1920player").hide();
+    $("#1930player").hide();
+    $("#1940player").hide();
+    $("#1950player").hide();
+    $("#1960player").hide();
+    $("#1970player").hide();
+    $("#1980player").hide();
+    $("#1990player").hide();
+    $("#2000player").hide();
+    $("#2010player").hide();
   }
 
-function show2010(){
-  $("#2010").click(function(){
-      $("#1900player").hide();
-      $("#1910player").hide();
-      $("#1920player").hide();
-      $("#1930player").hide();
-      $("#1940player").hide();
-      $("#1950player").hide();
-      $("#1960player").hide();
-      $("#1970player").hide();
-      $("#1980player").hide();
-      $("#1990player").hide();
-      $("#2000player").hide();
-  });
-  $("#2010").click(function(){
-      $("#2010player").show();
-  });
+  function show1900(){
+      $("#1900").click(function(){
+          $("#1910player").hide();
+          $("#1920player").hide();
+          $("#1930player").hide();
+          $("#1940player").hide();
+          $("#1950player").hide();
+          $("#1960player").hide();
+          $("#1970player").hide();
+          $("#1980player").hide();
+          $("#1990player").hide();
+          $("#2000player").hide();
+          $("#2010player").hide();
+      });
+      $("#1900").click(function(){
+          $("#1900player").show();
+      });
+  }
+
+  function show1910(){
+      $("#1910").click(function(){
+          $("#1900player").hide();
+          $("#1920player").hide();
+          $("#1930player").hide();
+          $("#1940player").hide();
+          $("#1950player").hide();
+          $("#1960player").hide();
+          $("#1970player").hide();
+          $("#1980player").hide();
+          $("#1990player").hide();
+          $("#2000player").hide();
+          $("#2010player").hide();
+      });
+      $("#1910").click(function(){
+          $("#1910player").show();
+      });
+  }
+
+  function show1920(){
+      $("#1920").click(function(){
+          $("#1900player").hide();
+          $("#1910player").hide();
+          $("#1930player").hide();
+          $("#1940player").hide();
+          $("#1950player").hide();
+          $("#1960player").hide();
+          $("#1970player").hide();
+          $("#1980player").hide();
+          $("#1990player").hide();
+          $("#2000player").hide();
+          $("#2010player").hide();
+      });
+      $("#1920").click(function(){
+          $("#1920player").show();
+      });
+  }
+
+
+
+  function show1930(){
+      $("#1930").click(function(){
+          $("#1900player").hide();
+          $("#1910player").hide();
+          $("#1920player").hide();
+          $("#1940player").hide();
+          $("#1950player").hide();
+          $("#1960player").hide();
+          $("#1970player").hide();
+          $("#1980player").hide();
+          $("#1990player").hide();
+          $("#2000player").hide();
+          $("#2010player").hide();
+      });
+      $("#1930").click(function(){
+          $("#1930player").show();
+      });
+  }
+
+  function show1940(){
+      $("#1940").click(function(){
+          $("#1900player").hide();
+          $("#1910player").hide();
+          $("#1920player").hide();
+          $("#1930player").hide();
+          $("#1950player").hide();
+          $("#1960player").hide();
+          $("#1970player").hide();
+          $("#1980player").hide();
+          $("#1990player").hide();
+          $("#2000player").hide();
+          $("#2010player").hide();
+      });
+      $("#1940").click(function(){
+          $("#1940player").show();
+      });
+  }
+
+  function show1950(){
+      $("#1950").click(function(){
+          $("#1900player").hide();
+          $("#1910player").hide();
+          $("#1920player").hide();
+          $("#1930player").hide();
+          $("#1940player").hide();
+          $("#1960player").hide();
+          $("#1970player").hide();
+          $("#1980player").hide();
+          $("#1990player").hide();
+          $("#2000player").hide();
+          $("#2010player").hide();
+      });
+      $("#1950").click(function(){
+          $("#1950player").show();
+      });
+  }
+
+  function show1960(){
+      $("#1960").click(function(){
+          $("#1900player").hide();
+          $("#1910player").hide();
+          $("#1920player").hide();
+          $("#1930player").hide();
+          $("#1940player").hide();
+          $("#1950player").hide();
+          $("#1970player").hide();
+          $("#1980player").hide();
+          $("#1990player").hide();
+          $("#2000player").hide();
+          $("#2010player").hide();
+      });
+      $("#1960").click(function(){
+          $("#1960player").show();
+      });
+  }
+
+  function show1970(){
+      $("#1970").click(function(){
+          $("#1900player").hide();
+          $("#1910player").hide();
+          $("#1920player").hide();
+          $("#1930player").hide();
+          $("#1940player").hide();
+          $("#1950player").hide();
+          $("#1960player").hide();
+          $("#1980player").hide();
+          $("#1990player").hide();
+          $("#2000player").hide();
+          $("#2010player").hide();
+      });
+      $("#1970").click(function(){
+          $("#1970player").show();
+      });
+  }
+
+  function show1980(){
+      $("#1980").click(function(){
+          $("#1900player").hide();
+          $("#1910player").hide();
+          $("#1920player").hide();
+          $("#1930player").hide();
+          $("#1940player").hide();
+          $("#1950player").hide();
+          $("#1960player").hide();
+          $("#1970player").hide();
+          $("#1990player").hide();
+          $("#2000player").hide();
+          $("#2010player").hide();
+      });
+      $("#1980").click(function(){
+          $("#1980player").show();
+      });
 }
 
 function show1990(){
@@ -146,20 +316,38 @@ function show1990(){
       $("#2000").click(function(){
           $("#2000player").show();
       });
-    }
+  }
+  function show2010(){
+    $("#2010").click(function(){
+        $("#1900player").hide();
+        $("#1910player").hide();
+        $("#1920player").hide();
+        $("#1930player").hide();
+        $("#1940player").hide();
+        $("#1950player").hide();
+        $("#1960player").hide();
+        $("#1970player").hide();
+        $("#1980player").hide();
+        $("#1990player").hide();
+        $("#2000player").hide();
+    });
+    $("#2010").click(function(){
+        $("#2010player").show();
+    });
+}
 
 
 $(document).ready(function(){
-  // show1900();
-  // show1910();
-  // show1920();
-  // show1930();
-  // show1940();
-  // show1950();
-  // show1960();
-  // show1970();
-  // show1980();
-  slider();
+  hidePlayers();
+  show1900();
+  show1910();
+  show1920();
+  show1930();
+  show1940();
+  show1950();
+  show1960();
+  show1970();
+  show1980();
   show1990();
   show2000();
   show2010();

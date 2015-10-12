@@ -19,29 +19,43 @@ body{
   background-image: url('http://bestpixgallery.com/images/8n/8ntg8br.png');
   background-size: cover;
   width: 100%;
-  overflow: scroll;
   color: white;
 }
 .players{
-  margin-left: 50%;
-  margin-right: 50%;
+  margin-left: 42%;
 }
-.timeline{
+.decades-buttons-list{
+  margin-left: 25%;
+  border-radius: 20px;
   display: inline-block;
-  margin-left: 50%;
-  margin-right: 50%;
+  background-color: darkgrey;
 }
-.timeline-div{
-  background: white;
+.decades-buttons{
+  display: inline-block;
+  margin: 7px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+}
+.decades-buttons:hover{
+  cursor: pointer;
+}
+#decades-list{
+  color: black;
+  background-color: white;
+  margin-left: 43%;
 }
 #user-content{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 40%;
   border-radius: 12px;
   padding: 7px;
   width: 20%;
   text-align: center;
-  margin-left: 50%;
-  margin-right: 50%;
+  margin-left: 40%;
   color: black;
-  background: white;
+  background: darkgrey;
   display: inline-block;
 }
